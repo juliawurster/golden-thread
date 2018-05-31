@@ -1,0 +1,21 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Registration
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <p>
+      Welcome to the charity app.
+    </p>
+    <ion-input placeholder="First Name" [(ngModel)]="firstname"></ion-input>
+    <ion-input placeholder="Last Name" [(ngModel)]="lastname"></ion-input>
+    <ion-input placeholder="Username" [(ngModel)]="username"></ion-input>
+    <ion-input type="Password" placeholder="password" [(ngModel)]="password"></ion-input>
+    <ion-input placeholder="Which kind of charities interest you the most?" [(ngModel)]="interests"></ion-input>
+
+    <button ion-button (click)="register()">Register</button>
+  </ion-content>
+  

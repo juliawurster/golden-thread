@@ -1,14 +1,28 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams, MenuController } from 'ionic-angular';
+import { LoginPage } from '../login/login';
+import { RegistrationPage } from '../registration/registration';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage {
+export class HomePage 
+{
+  constructor(public navCtrl: NavController, public navParams: NavParams, public menuCtrl: MenuController) {}
 
-  constructor(public navCtrl: NavController) {
-
+  // openMenu() 
+  // {
+  // this.menuCtrl.open();
+  // console.log("menu was opened");
+  // }
+  
+  navToLogin()
+  {
+    this.navCtrl.push(LoginPage);
   }
-
+  navToRegistration()
+  {
+    this.navCtrl.push(RegistrationPage);
+  }
 }

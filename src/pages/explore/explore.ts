@@ -3,29 +3,53 @@ import { NavController, NavParams } from 'ionic-angular';
 import { LearnPage } from '../learn/learn';
 import { ProfilePage } from '../profile/profile';
 import { PaymentPage } from '../payment/payment';
-import {CharityProfilePage } from '../charity-profile/charity-profile'
+import { CharityPublicProfilePage } from '../charity-public/charity-public';
+import { Charity } from '../../models/charity'
 
 @Component({
   selector: 'page-explore',
   templateUrl: 'explore.html'
 })
 export class ExplorePage {
-  public charityname: string;
-  public charitybio: string;
+  public charities: Array<Charity> = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
     
-    ionViewDidLoad() {
-    this.charityname = this.navParams.get("charityname");
-    this.charitybio = this.navParams.get("charitybio");
+    var charity1 = new Charity();
+    charity1.id = 1;
+    charity1.name = "Apple";
+    charity1.bio = "theyre red";
+
+    var charity2 = new Charity();
+    charity2.id = 2;
+    charity2.name = "Lime";
+    charity2.bio = "theyre green";
+
+    var charity3 = new Charity();
+    charity3.id = 3;
+    charity3.name = "Orange";
+    charity3.bio = "u already no";
+
+    var charity4 = new Charity();
+    charity4.id = 4;
+    charity4.name = "Blueberry";
+    charity4 .bio = "theyre blue";
+
+    this.charities.push(charity1);
+    this.charities.push(charity2);
+    this.charities.push(charity3);
+    this.charities.push(charity4);
+  }
+  ionViewDidLoad() 
+  {
+    console.log("ionViewDidLoad ExplorePage");
   }
 
-    charitypage()
+    charitypage(charity: Charity)
     {
-      this.navCtrl.push(CharityProfilePage, 
+      this.navCtrl.push(CharityPublicProfilePage, 
         {
-          charityname: this.charityname,
-          charitybio: this.charitybio,
+          charity: charity
         });
     }
 }

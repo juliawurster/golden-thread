@@ -12,7 +12,9 @@ import { LearnPage } from '../pages/learn/learn';
 import { PaymentPage } from '../pages/payment/payment';
 import { ProfilePage } from '../pages/profile/profile';
 import { RegistrationPage } from '../pages/registration/registration';
-import { CharityProfilePage } from '../pages/charity-profile/charity-profile'
+// import { CharityProfilePage } from '../pages/charity-profile/charity-profile';
+// import { CharityRegistrationPage } from '../pages/charity-registration/charity-registration';
+import { CharityPublicProfilePage } from '../pages/charity-public/charity-public'
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { CharityProfilePage } from '../pages/charity-profile/charity-profile'
     ProfilePage,
     RegistrationPage,
     LoginPage,
-    CharityProfilePage
+    // CharityProfilePage,
+    // CharityRegistrationPage,
+    CharityPublicProfilePage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,9 @@ import { CharityProfilePage } from '../pages/charity-profile/charity-profile'
     ProfilePage,
     RegistrationPage,
     LoginPage,
-    CharityProfilePage
+    // CharityProfilePage,
+    // CharityRegistrationPage,
+    CharityPublicProfilePage
   ],
   providers: [
     StatusBar,

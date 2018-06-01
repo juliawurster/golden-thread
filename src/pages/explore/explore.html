@@ -9,60 +9,16 @@
   <ion-content padding>
     <p>Welcome to the charity app.</p>
     <ion-list inset>
-    <ion-card (click)="charitypage()">
+      <!-- <ion-item> -->
+      <ion-card *ngFor="let charity of charities" (click)="charitypage(charity)">
         <ion-card-header>
-            Charity Name
-            {{charityname}}
+            {{charity.name}}
         </ion-card-header>
-        
         <ion-card-content>
-            Information about the charity
-        </ion-card-content>              
-    </ion-card>
-    <ion-card (click)="charitypage()">
-        <ion-card-header>
-            Charity Name
-        </ion-card-header>
-        
-        <ion-card-content>
-            Information about the charity
-        </ion-card-content>           
-    </ion-card>
-    <ion-card (click)="charitypage()">
-        <ion-card-header>
-           Charity Name
-        </ion-card-header>
-        
-        <ion-card-content>
-            Information about the charity
+            {{charity.bio}}
         </ion-card-content>
-        
-    </ion-card>
-    <ion-card (click)="charitypage()">
-        <ion-card-header>
-            Charity Name
-        </ion-card-header>
-        
-        <ion-card-content>
-            Information about the charity
-        </ion-card-content>           
-    </ion-card>
-    <ion-card (click)="charitypage()">
-        <ion-card-header>
-            Charity Name
-        </ion-card-header>           
-        <ion-card-content>
-            Information about the charity
-        </ion-card-content>           
-    </ion-card>
-    <ion-card (click)="charitypage()">
-        <ion-card-header>
-            Charity Name
-        </ion-card-header>          
-        <ion-card-content>
-            Information about the charity
-        </ion-card-content>           
-    </ion-card>
-      </ion-list>
+      </ion-card>
+    <!-- </ion-item> -->
+    </ion-list>
   </ion-content>
   

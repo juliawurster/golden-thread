@@ -10,8 +10,10 @@ import { PaymentPage } from '../payment/payment';
 })
 export class CharityProfilePage {
 
-  public charityname: string;
-  public charitybio: string;
+//   public charityname: string;
+//   public charitybio: string;
+    public charitybio = "information about charity";
+    public charityname = "charity name";
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     
@@ -26,8 +28,8 @@ export class CharityProfilePage {
     {
       this.navCtrl.push(ExplorePage, 
         {
-          charityname: this.charityname,
-          charitybio: this.charitybio,
+        //   charityname: this.charityname,
+        //   charitybio: this.charitybio,
         });
     }
 }

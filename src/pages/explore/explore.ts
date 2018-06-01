@@ -3,7 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { LearnPage } from '../learn/learn';
 import { ProfilePage } from '../profile/profile';
 import { PaymentPage } from '../payment/payment';
-
+import {CharityProfilePage } from '../charity-profile/charity-profile'
 
 @Component({
   selector: 'page-explore',
@@ -18,7 +18,14 @@ export class ExplorePage {
     ionViewDidLoad() {
     this.charityname = this.navParams.get("charityname");
     this.charitybio = this.navParams.get("charitybio");
-
   }
 
+    charitypage()
+    {
+      this.navCtrl.push(CharityProfilePage, 
+        {
+          charityname: this.charityname,
+          charitybio: this.charitybio,
+        });
+    }
 }

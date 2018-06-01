@@ -12,6 +12,7 @@ import { LearnPage } from '../pages/learn/learn';
 import { PaymentPage } from '../pages/payment/payment';
 import { ProfilePage } from '../pages/profile/profile';
 import { RegistrationPage } from '../pages/registration/registration';
+import { CharityProfilePage } from '../pages/charity-profile/charity-profile'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { RegistrationPage } from '../pages/registration/registration';
     PaymentPage,
     ProfilePage,
     RegistrationPage,
-    LoginPage
+    LoginPage,
+    CharityProfilePage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { RegistrationPage } from '../pages/registration/registration';
     PaymentPage,
     ProfilePage,
     RegistrationPage,
-    LoginPage
+    LoginPage,
+    CharityProfilePage
   ],
   providers: [
     StatusBar,
